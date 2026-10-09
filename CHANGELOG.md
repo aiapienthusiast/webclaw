@@ -6,7 +6,7 @@ Format follows [Keep a Changelog](https://keepachangelog.com/).
 ## [Unreleased]
 
 ### Added
-- **Cheaper Inference provider in the LLM chain (opt-in).** Set `CHEAPER_INFERENCE_API_KEY` to add [Cheaper Inference](https://cheaperinference.com) as a provider for the LLM features (extraction, summarization). It's added at the end of the chain — Ollama → OpenAI → Gemini → Anthropic → Atlas Cloud → OrcaRouter → Cheaper Inference — so it only runs when you configure it and never preempts an already-configured provider. Override the model with `CHEAPER_INFERENCE_MODEL` (default `gpt-5.4-mini`) and the endpoint with `CHEAPER_INFERENCE_BASE_URL` (default `https://api.cheaperinference.com/v1`).
+- **New opt-in LLM provider.** An OpenAI-compatible provider is available for the LLM features (extraction, summarization). It is added at the end of the chain, so it runs only when you set its API key and never preempts an already-configured provider. `env.example` lists its settings.
 
 ## [0.6.24] - 2026-09-18
 
